@@ -1,13 +1,40 @@
-import React from 'react'
+import ListaPostagens from '../../components/postagem/listapostagens/Listapostagens';
+import ModalPostagem from '../../components/postagem/modalpostagem/ModalPostagem';
 
 function Home() {
     return (
-<>
-<div className ="flex justify-center bg-amber-300">
-    <h1 className='font-bold text-3xl'>Teste</h1>
-</div>
-</>
-    )
+        <>
+            <div className="bg-indigo-900 flex justify-center">
+              
+                <div className="container grid grid-cols-2 text-white">
+                    
+                   
+                    <div className="flex flex-col gap-4 items-center justify-center py-4">
+                        <h2 className="text-5xl font-bold">Seja bem Vinde!</h2>
+                        <p className="text-xl">
+                            Expresse aqui seus pensamentos e opiniões
+                        </p>
+                        <div className="flex justify-center gap-4">
+                            <ModalPostagem />
+                        </div>
+                    </div>
+                
+                    <div className="flex justify-center">
+                        <img 
+                            src="https://i.imgur.com/fyfri1v.png"
+                            alt="Imagem Pagina Home"
+                            className="w-2/3"
+                        />
+                    </div>
+                    
+
+                </div> 
+            </div> 
+       
+            
+            <ListaPostagens />
+        </>
+    );
 }
  
-export default Home
+export default Home;
